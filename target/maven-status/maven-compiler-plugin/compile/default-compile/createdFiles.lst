@@ -1,0 +1,6 @@
+com\libreria\model\DetalleVenta.class
+com\libreria\LibreriaApplication.class
+com\libreria\model\Cliente.class
+com\libreria\model\Libro.class
+com\libreria\model\Venta.class
+com\libreria\model\Autor.class

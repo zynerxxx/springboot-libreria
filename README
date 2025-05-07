@@ -1,0 +1,94 @@
+# 📚 Librería Spring Boot + PostgreSQL
+
+![Java](https://img.shields.io/badge/Java-17%2B-blue?logo=java)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.5-brightgreen?logo=springboot)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14%2B-blue?logo=postgresql)
+![Maven](https://img.shields.io/badge/Maven-Build-orange?logo=apachemaven)
+
+---
+
+## ✨ Descripción
+
+Este proyecto implementa el modelo de negocio de una **librería** que vende libros físicos. Al ejecutar la aplicación, las tablas necesarias se generan automáticamente en una base de datos PostgreSQL usando JPA.
+
+---
+
+## 🚀 Requisitos previos
+
+- ☕ **Java 17** o superior
+- 🐘 **PostgreSQL** instalado y corriendo
+- 📦 **Maven**
+
+---
+
+## ⚙️ Configuración inicial
+
+1. **Crea la base de datos vacía**
+
+   ```sql
+   CREATE DATABASE corto2db;
+   ```
+
+2. **Edita el archivo de configuración**
+
+   Abre `src/main/resources/application.properties` y cambia las siguientes líneas por tu usuario y contraseña de PostgreSQL:
+
+   ```properties
+   spring.datasource.username=TU_USUARIO
+   spring.datasource.password=TU_CONTRASEÑA
+   ```
+
+   Ejemplo:
+
+   ```properties
+   spring.datasource.username=postgres
+   spring.datasource.password=miclave
+   ```
+
+3. **Verifica la URL de conexión**
+
+   Si tu base de datos tiene otro nombre o está en otro host/puerto, ajusta la línea:
+
+   ```properties
+   spring.datasource.url=jdbc:postgresql://localhost:5432/corto2db
+   ```
+
+---
+
+## 🏗️ Modelo de Datos
+
+| Entidad         | Relación                                      |
+|-----------------|-----------------------------------------------|
+| **Libro**       | Muchos a muchos con **Autor**                 |
+| **Autor**       | Muchos a muchos con **Libro**                 |
+| **Cliente**     | Uno a muchos con **Venta**                    |
+| **Venta**       | Uno a muchos con **DetalleVenta**             |
+| **DetalleVenta**| Muchos a uno con **Libro**                    |
+
+---
+
+## ▶️ Ejecución
+
+Desde la raíz del proyecto, ejecuta:
+
+```sh
+mvn spring-boot:run
+```
+
+Al iniciar, las tablas se crearán automáticamente en la base de datos indicada.
+
+---
+
+## 📝 Notas
+
+- El usuario y la base de datos deben existir antes de ejecutar la aplicación.
+- Si necesitas crear el usuario en PostgreSQL, hazlo desde **pgAdmin** o **psql**.
+- **No subas tus credenciales reales a repositorios públicos.**
+
+---
+
+## 📬 Contacto
+
+¿Dudas o problemas? Contacta al desarrollador del proyecto.
+
+---
