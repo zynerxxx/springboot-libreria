@@ -1,4 +1,4 @@
-# 📚 Librería Spring Boot + PostgreSQL
+📚 Librería Spring Boot + PostgreSQL
 
 ![Java](https://img.shields.io/badge/Java-17%2B-blue?logo=java)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.5-brightgreen?logo=springboot)
@@ -7,29 +7,29 @@
 
 ---
 
-## ✨ Descripción
+✨ Descripción
 
-Este proyecto implementa el modelo de negocio de una **librería** que vende libros físicos. Al ejecutar la aplicación, las tablas necesarias se generan automáticamente en una base de datos PostgreSQL usando JPA.
+Este proyecto implementa el modelo de negocio de una librería que vende libros físicos. Al ejecutar la aplicación, las tablas necesarias se generan automáticamente en una base de datos PostgreSQL usando JPA.
 
 ---
 
-## 🚀 Requisitos previos
+🚀 Requisitos previos
 
-- ☕ **Java 17** o superior
+- ☕ Java 17 o superior
 - 🐘 **PostgreSQL** instalado y corriendo
 - 📦 **Maven**
 
 ---
 
-## ⚙️ Configuración inicial
+⚙️ Configuración inicial
 
-1. **Crea la base de datos vacía**
+1. Crea la base de datos vacía
 
    ```sql
    CREATE DATABASE corto2db;
    ```
 
-2. **Edita el archivo de configuración**
+2. Edita el archivo de configuración
 
    Abre `src/main/resources/application.properties` y cambia las siguientes líneas por tu usuario y contraseña de PostgreSQL:
 
@@ -45,7 +45,7 @@ Este proyecto implementa el modelo de negocio de una **librería** que vende lib
    spring.datasource.password=miclave
    ```
 
-3. **Verifica la URL de conexión**
+3. Verifica la URL de conexión
 
    Si tu base de datos tiene otro nombre o está en otro host/puerto, ajusta la línea:
 
@@ -55,7 +55,7 @@ Este proyecto implementa el modelo de negocio de una **librería** que vende lib
 
 ---
 
-## 🏗️ Modelo de Datos
+🏗️ Modelo de Datos
 
 | Entidad         | Relación                                      |
 |-----------------|-----------------------------------------------|
@@ -67,7 +67,7 @@ Este proyecto implementa el modelo de negocio de una **librería** que vende lib
 
 ---
 
-## ▶️ Ejecución
+▶️ Ejecución
 
 Desde la raíz del proyecto, ejecuta:
 
@@ -79,16 +79,10 @@ Al iniciar, las tablas se crearán automáticamente en la base de datos indicada
 
 ---
 
-## 📝 Notas
+📝 Notas
 
 - El usuario y la base de datos deben existir antes de ejecutar la aplicación.
 - Si necesitas crear el usuario en PostgreSQL, hazlo desde **pgAdmin** o **psql**.
-- **No subas tus credenciales reales a repositorios públicos.**
 
 ---
 
-## 📬 Contacto
-
-¿Dudas o problemas? Contacta al desarrollador del proyecto.
-
----
